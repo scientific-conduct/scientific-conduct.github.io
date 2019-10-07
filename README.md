@@ -1,4 +1,4 @@
-#### The website for the Scientific Conduct project.
+This repository contains the source code for the website for the [Scientific CO<sub>2</sub>nduct](https://scientific-conduct.github.io/) project.
 
 In order to add yourself, your research group, or your institution as a public endorser please either:
 
@@ -7,4 +7,4 @@ In order to add yourself, your research group, or your institution as a public e
 
 If you would like to contribute to the website in any other way, please feel free to submit a pull request!
 
-A pdf version of this website, as well as a latex template of the suggested reporting table can be found in the resources folder of the repository.
+Additionally, a pdf version of the website, as well as a latex template of the suggested reporting table can be found in the resources folder of the repository.
