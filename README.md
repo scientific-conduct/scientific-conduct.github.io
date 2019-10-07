@@ -1,4 +1,4 @@
-This repository contains the source code for the website for the [Scientific CO<sub>2</sub>nduct](https://scientific-conduct.github.io/) project.
+This repository contains the source code for the [website of the Scientific CO<sub>2</sub>nduct](https://scientific-conduct.github.io/) project.
 
 In order to add yourself, your research group, or your institution as a public endorser please either:
 
