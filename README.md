@@ -1,9 +1,9 @@
-####The website for the Scientific Conduct project.
+#### The website for the Scientific Conduct project.
 
 In order to add yourself, your research group, or your institution as a public endorser please either:
 
-	- Fork this repo, add your details under the endorsers section of index.html, and submit a pull request.
-	- send an email to scientificconduct@gmail.com
+1. Fork this repo, add your details under the endorsers section of index.html, and submit a pull request.
+2. send an email to scientificconduct@gmail.com
 
 If you would like to contribute to the website in any other way, please feel free to submit a pull request!
 
