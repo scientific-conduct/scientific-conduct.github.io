@@ -139,7 +139,7 @@ h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
 h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; text-align:center;} 
 h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; text-align:center;}
 h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; text-align:center;}
-h6 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.7;  letter-spacing: -.04rem; }
 
 /* Larger than phablet */
 @media (min-width: 550px) {
@@ -153,6 +153,12 @@ h6 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
 
 p {margin-top: 0; 
   text-align: justify}
+
+p.reduced {margin-top: -15px; 
+  text-align: justify}
+
+p.centered{margin-top: -15px; 
+  text-align: center}
 
 
 
@@ -172,7 +178,7 @@ a:hover, a:active {text-decoration: none; color: black; border-bottom: 1px solid
 
 a {
   text-decoration: none; color: black; border-bottom: 1px solid red; }
-  
+
 
 
 
@@ -305,6 +311,7 @@ ul {
   list-style: none; }
 ol {
   list-style: decimal inside; }
+
 ol, ul {
   padding-left: 0;
   margin-top: 0; }
@@ -336,17 +343,28 @@ pre > code {
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+table.center {
+    width:40%; 
+    margin-left:30%; 
+    margin-right:30%;
+}
+
+
 th,
 td {
-  padding: 12px 15px;
+  padding: 0px 0px;
   text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  border-bottom: 1px solid #707070; }
 th:first-child,
 td:first-child {
-  padding-left: 0; }
+  padding-left: 0; text-align: left;}
 th:last-child,
 td:last-child {
-  padding-right: 0; }
+  padding-right: 0; text-align: center;}
+
+td.bottomdb {border-bottom: double #707070;}
+td.noborder {border-bottom: none;}
+th.topandbottom {border-bottom: 1px solid #707070; border-top: 1px solid #707070;}
 
 
 /* Spacing
