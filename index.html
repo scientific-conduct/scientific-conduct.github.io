@@ -37,14 +37,18 @@
          <h4>Scientific CO<sub>2</sub>nduct</h4>
          <h5>A Framework for Reporting the Carbon Cost of Scientific Research</h5>
 
-         <p>The recent Intergovernmental Panel on Climate Change (IPCC) <a href="https://www.ipcc.ch/sr15/"  target="_blank">special report </a> on the consequences of global warming to 1.5&#8451; above pre-industrial levels has made it clear that global heating poses significant and urgent threats to the sustainability of both humanity and our planet. In order to avert global catastrophe and mass extinctions it is critical that all members of society acknowledge the scale and urgency of the crisis that we face, and act immediately both to address the sustainability of our own lives and to demand meaningful responses from government and industry. We believe that the scientific community has a particular obligation, not only to contribute towards education, advocacy and effective solutions, but also to be transparent in the evaluation and mitigation of the carbon costs of our own research. To this end, we propose here a simple framework for reporting the carbon costs of research, with the hope that both individual researchers and institutions will commit to such reporting. In particular, it is hoped that in the short term such a standardised reporting framework will raise awareness of the scale of our collective impact, and promote the immediate offsetting of carbon costs, while in the longer term we hope to inspire change in the ways in which global collaborative scientific research is performed, using sustainability as a design principle.</p>
+         <p>The recent Intergovernmental Panel on Climate Change (IPCC) <a
+         href="https://www.ipcc.ch/sr15/"  target="_blank">special report </a>
+         on the consequences of global warming to 1.5&#176; C above pre-industrial levels has made it clear that global heating poses significant and urgent threats to the sustainability of both humanity and our planet. In order to avert global catastrophe and mass extinctions it is critical that all members of society acknowledge the scale and urgency of the crisis that we face, and act immediately both to address the sustainability of our own lives and to demand meaningful responses from government and industry. We believe that the scientific community has a particular obligation, not only to contribute towards education, advocacy and effective solutions, but also to be transparent in the evaluation and mitigation of the carbon costs of our own research. To this end, we propose here a simple framework for reporting the carbon costs of research, with the hope that both individual researchers and institutions will commit to such reporting. In particular, it is hoped that in the short term such a standardised reporting framework will raise awareness of the scale of our collective impact, and promote the immediate offsetting of carbon costs, while in the longer term we hope to inspire change in the ways in which global collaborative scientific research is performed, using sustainability as a design principle.</p>
 
          <h6>A Standardised Reporting Table</h6>
 
          <p>  We, the endorsers of this proposal, commit to including a
          CO<sub>2</sub> reporting table such as the one below in all our future
          publications. This table reports in a transparent way the carbon cost
-         of a particular research work, such as a publication, taking into account the cost of both computational resources and research associated travel. On this site we provide a list of all public endorsers of this proposal and if you, your research group, or your academic institution would like to make a similar public commitment, please do so via pull request on the <a href="https://github.com/scientific-conduct/scientific-conduct.github.io" target="_blank"> repository of this website</a>, or by sending a mail to <a href="#" onclick="return false;"> scientificconduct@gmail.com</a>.  In addition to including such a reporting table, we commit to offsetting the CO<sub>2</sub>-costs of our research, acknowledging this as a non-ideal temporary solution. We recognize that without institutional support such offsetting may be prohibitively expensive for individual students and researchers, and we hope that such transparent reporting provides a clear motivation of the need for institutional support in this regard.</p>
+         of a particular research work, such as a publication, taking into
+         account the cost of both computational resources and research
+         associated travel. On this website we provide a list of all public endorsers of this proposal and if you, your research group, or your academic institution would like to make a similar public commitment, please do so via pull request on the <a href="https://github.com/scientific-conduct/scientific-conduct.github.io" target="_blank"> repository of this website</a>, or by sending a mail to <a href="#" onclick="return false;"> scientificconduct@gmail.com</a>.  In addition to including such a reporting table, we commit to offsetting the CO<sub>2</sub>-costs of our research, acknowledging this as a non-ideal temporary solution. We recognise that without institutional support such offsetting may be prohibitively expensive for individual students and researchers, and we hope that such transparent reporting provides a clear motivation of the need for institutional support in this regard.</p>
 
           <table class="center">
           <tr>
@@ -82,33 +86,85 @@
           </tr>
         </table> 
 
-        <p> In order to facilitate the use of such tables, we have included a LaTex template in the resources folder of the website <a href="https://github.com/scientific-conduct/scientific-conduct.github.io" target="_blank"> repository</a>. Additionally, let's walk through an example of how to calculate all the necessary information. We begin with a description of how to calculate the total CO<sub>2</sub> cost of any computational resources which were utilized: Firstly, it is necessary to estimate the <i>total kernel hours</i> that were used. This should be available to users of High Performance Computing (HPC) systems, or can be kept track of manually. Next, one should estimate the <i>thermal design power per kernel</i>. For this, you will need to find out on which kernel the simulations were conducted. The thermal design power should then be available in the manual of the manufacturer. For users of HPC systems we encourage you to reach out to your system administrators to obtain this information. Given the above information, one can calculate the <i>total energy consumption</i> (in kWh) via</p>
-        <p class="centered"> [total energy consumption (kWh)] = [total kernel hours (h)] x [thermal design power per kernel (W)] x 1000  </p>
+        <p> In order to facilitate the use of such tables, we have included a
+        LaTeX template in the resources folder of the website <a
+        href="https://github.com/scientific-conduct/scientific-conduct.github.io"
+        target="_blank"> repository</a>. If you are not using LaTeX, feel free
+        to use your own template containing the above information. Moreover,
+        the table can be shortened if no numerical simulations were performed.
+        Additionally, let's walk through an example of how to calculate all the necessary information. We begin with a description of how to calculate the total CO<sub>2</sub> cost of any computational resources which were utilised: Firstly, it is necessary to estimate the <i>total kernel hours</i> that were used. This should be available to users of High Performance Computing (HPC) systems, or can be kept track of manually. Next, one should estimate the <i>thermal design power per kernel</i>. For this, you will need to find out on which kernel the simulations were conducted. The thermal design power should then be available in the manual of the manufacturer. For users of HPC systems we encourage you to reach out to your system administrators to obtain this information. Given the above information, one can calculate the <i>total energy consumption</i> (in kWh) via</p>
+        <p class="centered"> [total energy consumption (kWh)] = [total kernel
+        hours (h)] x [thermal design power per kernel (W)] / 1000  </p>
         <p class="reduced"> Next, it is necessary to find out the <i>average CO<sub>2</sub> emissions </i>(in kg/kWh) from energy production in the country in which your computational resources were located. For European countries this information, sourced from European Environmental Agency, can be found <a href="https://www.rensmart.com/Calculators/KWH-to-CO2" target="_blank"> here</a>. If you have additional data for your location, please add it to this website via a pull request! If you cannot find this information about your location or are unsure where the computations were conducted, we suggest using the global average of 0.47 kg/kWh. Finally, to calculate the <i>total CO<sub>2</sub> emissions</i> (kg) of your computational resources one uses the simple formula:</p>
         <p class="centered"> [total CO<sub>2</sub> emissions (kg)] = [total energy consumption (kWh)] x [average CO<sub>2</sub> emissions (kg/kWh)] </p>
 
-        <p class="reduced"> Before discussing ways in which the CO<sub>2</sub> emissions from numerical simulations can be offset, let us first describe how to estimate the CO<sub>2</sub> emissions from research related air-travel. The first step in this regard is to list all research related flights, and we would like to suggest including flights for collaborative research visits, as well as conference attendance in fields relevant to the research work, or at which collaborators are present. Given this list of flights, one can then use <a href="https://www.atmosfair.de/en/" target="_blank"> atmosfair</a> to calculate the CO<sub>2</sub> emissions of each flight, and sum them together to obtain the total, which is reported in the table. Finally, at this stage we can discuss the ways in which the relevant CO<sub>2</sub> emissions can be offset. Once again however we want to stress that offsetting emissions <i>is not</i> a sustainable solution, and provides only a temporary strategy, which we advocate in conjunction with dedicated efforts to re-design our research process in a way that drastically reduces emissions. Again, we also acknowledge that offsetting costs may be prohibitive for individual researchers, and we hope to provide motivation to students and researchers to insist that such costs be covered by funding organizations and academic institutions. Even if it is not financially possible to offset the relevant emissions, we still encourage using the reporting table, as a method of raising awareness to this issue. In light of these caveats however, given an estimate of the total  CO<sub>2</sub> emissions, if financially possible these can be easily offset using <a href="https://www.atmosfair.de/en/" target="_blank"> atmosfair</a>.</p>
+        <p class="reduced"> Before discussing ways in which the CO<sub>2</sub>
+        emissions from numerical simulations can be offset, let us first
+        describe how to estimate the CO<sub>2</sub> emissions from research
+        related air-travel. The first step in this regard is to list all
+        research related flights, and we would like to suggest including
+        flights for collaborative research visits, as well as conference
+        attendance in fields relevant to the research work, or at which
+        collaborators are present. Given this list of flights, one can then use
+         <a href="https://www.atmosfair.de/en/" target="_blank">atmosfair</a>
+        to calculate the CO<sub>2</sub> emissions of each flight, and sum them
+        together to obtain the total, which is then reported in the table. Finally, at this stage we can discuss the ways in which the relevant CO<sub>2</sub> emissions can be offset. Once again however we want to stress that offsetting emissions <i>is not</i> a sustainable solution, and provides only a temporary strategy, which we advocate in conjunction with dedicated efforts to re-design our research process in a way that drastically reduces emissions. Again, we also acknowledge that offsetting costs may be prohibitive for individual researchers, and we hope to provide motivation to students and researchers to insist that such costs be covered by funding organisations and academic institutions. Even if it is not financially possible to offset the relevant emissions, we still encourage using the reporting table, as a method of raising awareness to this issue. In light of these caveats however, given an estimate of the total  CO<sub>2</sub> emissions, if financially possible these can be easily offset using <a href="https://www.atmosfair.de/en/" target="_blank">atmosfair</a>.</p>
 
         <h6>Towards Sustainable Science</h6>
 
         <p> Given that emission offsetting is not a sustainable or effective approach to mitigating the effects of global heating, what actions can we take, individually or as a community, to move towards a more sustainable mode of scientific research?  Here we provide some simple ideas, not all new, for how this might be achieved. However, we strongly intend this as a living document, and so if you have ideas or suggestions, please feel free to make a pull request! Let's begin with travel related CO<sub>2</sub> costs: </p>
 
-        <p class="reduced"> <b>Virtual conferences</b>. Conference related air-travel is certainly one of the greatest contributing factors to CO<sub>2</sub> emissions. While we recognize that academic functions play both a social role and an academic role, we strongly believe that in many instances virtual conferences allow for effective dissemination of research, with drastically reduced CO<sub>2</sub> footprints. We also believe their is significant scope for creativity in format here - for instance a conference as a collection of pre-recorded talks, supplemented with scheduled on-line question and answer sessions. This in fact may even aid the disseminatin of research, by allowing access to more than those who could attend physically, while maintaining the prestige of accepted talks etc.<p>
+        <p class="reduced"> <b>Virtual conferences</b>. Conference related
+        air-travel is certainly one of the greatest contributions to the
+        overall
+        CO<sub>2</sub> footprint of a researcher. While we recognise that
+        such meetings play both a social role and an academic role, we
+        strongly believe that in many instances virtual conferences allow for
+        effective dissemination of research, with drastically reduced
+        CO<sub>2</sub> emissions. We also believe there is significant scope
+        for creativity in format here - for instance a conference as a
+        collection of pre-recorded talks, supplemented with scheduled online
+        question and answer sessions. This in fact may even aid the
+        dissemination of research, by allowing access to a potentially much
+        broader audience than those who could attend physically, 
+        while maintaining the quality control of accepted talks.<p>
 
-        <p class="reduced"> <b>Bundling conferences</b>. As mentioned above, we acknolwedge the essential social role played by conferences, in building community cohesion and facilitating the development of collaborative relationships and new opportunities, and we recognize that virtual conferences cannot satisfactorily fulfill this role. However, we suggest that bundling conferences - i.e. holding one much longer event per year, rather than many smaller conferences - would allow for effective community building, while again significantly reducing the number of flights and individual researcher is required to take per year. In many communities there already exist such events - for example the annual three week  Benasque quantum information meeting (popular article in <a href="https://www.republik.ch/2019/09/07/die-physiker" target="_blank"> German</a> and <a href="https://docs.google.com/document/d/1R--apvFL1XUWNcSoPfyyxTxd9_mQ3x-vVICd7t_oAxY/edit" target="_blank"> English</a>).<p>
+        <p class="reduced"> <b>Bundling conferences</b>. As mentioned above, we
+        acknowledge the essential social role played by conferences, in
+        building community cohesion and facilitating the development of
+        collaborative relationships and new opportunities, and we recognise
+        that virtual conferences cannot fully satisfactorily fulfill this role. However, we suggest that bundling conferences - i.e. holding one much longer event per year, rather than many smaller conferences - would allow for effective community building, while again significantly reducing the number of flights an individual researcher is required to take per year. In many communities there already exist such events - for example the annual three week Benasque quantum information meeting 
+        (popular article in  <a
+        href="https://docs.google.com/document/d/1R--apvFL1XUWNcSoPfyyxTxd9_mQ3x-vVICd7t_oAxY/edit"
+        target="_blank">English</a> and <a href="https://www.republik.ch/2019/09/07/die-physiker" target="_blank">German</a>).<p>
 
         <p class="reduced"> <b>Choice of location</b>. If a conference is really necessary, choosing the location in a way that ensures many participants have the opportunity to reach it without the need for flying can make a big contribution towards mitigation of CO<sub>2</sub> expenses.<p>
 
         <p class="reduced"> <b> Using green venues</b>.  By now, there are many venues which offer green conferences, extending from the power supply of the venue to providing food and drinks from regional resources. Ideally we should be both scientists, and ethical consumers.<p>
 
-        While air travel is certainly the major contributing factor for research related CO<sub>2</sub> emissions, numerical simulations and the associated computational resources are also significant contributors, particularly in fields such as machine learning and data science. To this end we make some suggestions as to how such emmissions may be mitigated.
+        While air travel is certainly the major contributing factor for research related CO<sub>2</sub> emissions, numerical simulations and the associated computational resources are also significant contributors, particularly in fields such as machine learning and data science. To this end we make some suggestions as to how such emissions may be mitigated.
 
-        <p class="reduced"> <b>CO<sub>2</sub> emissions as a design principle</b>. When designing numerical simulations, scientists usually do not take CO<sub>2</sub> emissions into account. The runtime and the availability ofcomputational resources are usually the determining factors to choose the parameters for the simulation. We suggest a change in state of mind, allowing for question such as "Will my result improve in a significant way if I emit more CO<sub>2</sub>?" </i>, or, "Can I design methods and techniques with the goal of achieving the same results with less emissions?".<p>
+        <p class="reduced"> <b>CO<sub>2</sub> emissions as a design
+        principle</b>. When designing numerical simulations, scientists usually
+        do not take CO<sub>2</sub> emissions into account. The runtime and the
+        availability of computational resources are usually the determining
+        factors to choose the parameters for the simulation. We suggest a
+        change in state of mind, allowing for questions such as "Will my result improve in a significant way if I emit more CO<sub>2</sub>?" </i>, or, "Can I design methods and techniques with the goal of achieving the same results with less emissions?".<p>
 
-        <p class="reduced"> <b>Visibility of CO<sub>2</sub> emissions</b>. One of the primary motivations for the reporting framework proposed here is precisely to facilitate the process of using CO<sub>2</sub> emissions as a design principle, by making the amount of emissions visible. However we believe it is possible to go further by developing open source tools, and designing computational frameworks, that make visible the amount of  CO<sub>2</sub> which will be emitted either at the time of job submission, or in the user statistics for a particular computing facility or device. The widely used SLURM scheduler actually comes with such a feature!<p>
+        <p class="reduced"> <b>Visibility of CO<sub>2</sub> emissions</b>. One
+        of the primary motivations for the reporting framework proposed here is
+        precisely to facilitate the process of using CO<sub>2</sub> emissions
+        as a design principle, by making the amount of emissions visible.
+        However we believe it is possible to go further by developing open
+        source tools, and designing computational frameworks, that make visible
+        the amount of  CO<sub>2</sub> which will be emitted either at the time
+        of job submission, or in the user statistics for a particular computing
+        facility or device. The widely used <a
+        href="https://slurm.schedmd.com/overview.html"
+        target="_blank">SLURM</a> scheduler actually comes with such a feature!<p>
 
         <p class="reduced"> <b>An open source policy towards CO<sub>2</sub> heavy results</b>. It is becoming more and more popular to share code that is used for the 
-        scientific simulations. Large open-source libraries with special tools exists for almost any research direction. We propose to extend this sharing mentality to also share the <i>results</i> of costly computations, such as trained neural network models, or the outcome of other optimizations. While open source code makes running the model again easy, its not free for our planet. <p>
+        scientific simulations. Large open-source libraries with special tools exists for almost any research direction. We propose to extend this sharing mentality to also share the <i>results</i> of costly computations, such as trained neural network models, or the outcome of other optimisations. While open source code makes running the model again easy, its not free for our planet. <p>
 
 
         <h6>A Concluding Remark</h6>
@@ -117,7 +173,7 @@
 
         <h6>Endorsers</h6>
 
-        <p> Joe Soap, Tom Long, etc</p>
+        <p> Ryan Sweke &amp; Marcel Goihl</p>
         
 
         </div>
