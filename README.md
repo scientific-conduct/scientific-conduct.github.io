@@ -3,7 +3,7 @@ This repository contains the source code for the [website of the Scientific CO<s
 In order to add yourself, your research group, or your institution as a public endorser please either:
 
 1. Fork this repo, add your details under the endorsers section of index.html, and submit a pull request.
-2. send an email to scientificconduct@gmail.com
+2. send an email to <a href="mailto:scientificconduct@posteo.net">scientificconduct@posteo.net</a>
 
 If you would like to contribute to the website in any other way, please feel free to submit a pull request!
 
