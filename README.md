@@ -7,4 +7,4 @@ In order to add yourself, your research group, or your institution as a public e
 
 If you would like to contribute to the website in any other way, please feel free to submit a pull request!
 
-Additionally, a pdf version of the website, as well as a latex template of the suggested reporting table can be found in the resources folder of the repository.
+Additionally, a latex template of the suggested reporting table can be found in the resources folder of the repository.
