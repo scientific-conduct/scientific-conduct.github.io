@@ -37,6 +37,15 @@
          <h4>Scientific CO<sub>2</sub>nduct</h4>
          <h5>A Framework for Reporting the Carbon Cost of Scientific Research</h5>
 
+          <h6><b>TLDR:</b> Climate change is bad. Really bad. 
+          Transparency is key to find actionables. We want
+          to make climate costs of scientific research 
+          transparent by using a standardised table that
+          can be appended to publications. We also collect
+          other ideas of how to make science more sustainable. We want you
+          to be part of us.
+          </h6>
+
          <p>The recent Intergovernmental Panel on Climate Change (IPCC) <a
          href="https://www.ipcc.ch/sr15/"  target="_blank">special report </a>
          on the consequences of global warming to 1.5&#176; C above pre-industrial levels has made it clear that global heating poses significant and urgent threats to the sustainability of both humanity and our planet. In order to avert global catastrophe and mass extinctions it is critical that all members of society acknowledge the scale and urgency of the crisis that we face, and act immediately both to address the sustainability of our own lives and to demand meaningful responses from government and industry. We believe that the scientific community has a particular obligation, not only to contribute towards education, advocacy and effective solutions, but also to be transparent in the evaluation and mitigation of the carbon costs of our own research. To this end, we propose here a simple framework for reporting the carbon costs of research, with the hope that both individual researchers and institutions will commit to such reporting. In particular, it is hoped that in the short term such a standardised reporting framework will raise awareness of the scale of our collective impact, and promote the immediate offsetting of carbon costs, while in the longer term we hope to inspire change in the ways in which global collaborative scientific research is performed, using sustainability as a design principle.</p>
@@ -96,7 +105,12 @@
         the table can be shortened if no numerical simulations were performed.
         If you decide to visualise your CO<sub>2</sub> emissions, please also
         reference this website to increase the visibility of this project among
-        your community. Let's now walk through an example of how to calculate all the necessary information. We begin with a description of how to calculate the total CO<sub>2</sub> cost of any computational resources which were utilised: Firstly, it is necessary to estimate the <i>total kernel hours</i> that were used. This should be available to users of High Performance Computing (HPC) systems, or can be kept track of manually. Next, one should estimate the <i>thermal design power per kernel</i>. For this, you will need to find out on which kernel the simulations were conducted. The thermal design power should then be available in the manual of the manufacturer. For users of HPC systems we encourage you to reach out to your system administrators to obtain this information. Given the above information, one can calculate the <i>total energy consumption</i> (in kWh) via</p>
+        your community. Before getting to the details, we would like to
+        emphasize a related idea for <a href="https://mlco2.github.io/impact/"
+        target="_blank">calculating the carbon footprint of
+        machine learning simulations</a> that might already give you all the 
+        relevant information for your calculations.
+        Let's now walk through an example of how to calculate all the necessary information. We begin with a description of how to calculate the total CO<sub>2</sub> cost of any computational resources which were utilised: Firstly, it is necessary to estimate the <i>total kernel hours</i> that were used. This should be available to users of High Performance Computing (HPC) systems, or can be kept track of manually. Next, one should estimate the <i>thermal design power per kernel</i>. For this, you will need to find out on which kernel the simulations were conducted. The thermal design power should then be available in the manual of the manufacturer. For users of HPC systems we encourage you to reach out to your system administrators to obtain this information. Given the above information, one can calculate the <i>total energy consumption</i> (in kWh) via</p>
         <p class="centered"> [total energy consumption (kWh)] = [total kernel
         hours (h)] x [thermal design power per kernel (W)] / 1000  </p>
         <p class="reduced"> Next, it is necessary to find out the <i>average CO<sub>2</sub> emissions </i>(in kg/kWh) from energy production in the country in which your computational resources were located. For European countries this information, sourced from European Environmental Agency, can be found <a href="https://www.rensmart.com/Calculators/KWH-to-CO2" target="_blank"> here</a>. If you have additional data for your location, please add it to this website via a pull request! If you cannot find this information about your location or are unsure where the computations were conducted, we suggest using the global average of 0.47 kg/kWh. Finally, to calculate the <i>total CO<sub>2</sub> emissions</i> (kg) of your computational resources one uses the simple formula:</p>
