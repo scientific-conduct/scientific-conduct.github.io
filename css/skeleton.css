@@ -212,6 +212,10 @@ p.reduced {margin-top: -15px;
 p.centered{margin-top: -15px; 
   text-align: center}
 
+p.bibtex{
+  font-family: monospace
+}
+
 
 
 /* Links
